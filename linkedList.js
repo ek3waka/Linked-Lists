@@ -5,13 +5,20 @@ class LinkedList {
         this.list = {
                     value: value,
                     next: null,
-                    tail: null,
+                    //tail: null,
                     }
     }
     append(value) {
-        const nextNode = new Node(value)
-        this.list.next = nextNode
-        this.list.tail = nextNode
+        check(this.list.next)
+        //должно работать, но не работает
+        function check(next) {
+            if (next == null) {
+                const node = new Node(value)
+                //здесь не видит list
+                next = node
+            }
+            else check(next.next)
+        }
     }
     prepend(value) {
 
