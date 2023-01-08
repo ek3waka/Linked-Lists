@@ -1,11 +1,21 @@
 import { LinkedList } from "./linkedList.js"
 import { Node } from "./linkedListNode.js"
 
-const list = new LinkedList(123)
-list.append(4566)
+const linkedList = new LinkedList()
+linkedList.createFirstNode(123)
+linkedList.list.next = new Node(34232423423)
+linkedList.list.next.next = new Node('qdsads')
+linkedList.list.next.next.next = new Node('58')
+linkedList.append(4566)
+console.log(linkedList)
+/* list.append(12)
+list.append(5435435)
+list.append('dfsdfdsf') */
 /* list.tail() */
 
 
-//list.next.next = new Node(34232423423)
+
+
+
+
 /* console.log(list.tail()) */
-console.log(list)

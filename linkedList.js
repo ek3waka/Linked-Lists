@@ -1,24 +1,35 @@
 import { Node } from "./linkedListNode.js"
 
 class LinkedList {
-    constructor(value) {
+    constructor() {
         this.list = {
-                    value: value,
-                    next: null,
-                    //tail: null,
+
                     }
+    }
+    createFirstNode(value) {
+        if (!this.list.value) {
+            this.list.value = value
+            this.list.next = null
+        }
     }
     append(value) {
         check(this.list.next)
-        //должно работать, но не работает
+        
         function check(next) {
-            if (next == null) {
-                const node = new Node(value)
-                //здесь не видит list
-                next = node
+            
+            if (next === null) {
+                next = new Node(value)
+                
+                ///next не относится к листу
+                return next
             }
-            else check(next.next)
+            else {
+                check(next.next) 
+            }
+            
         }
+        //рекурсия работает, но как прицепить новый узел
+
     }
     prepend(value) {
 
