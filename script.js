@@ -15,13 +15,28 @@ linkedList.append(1)
 
 //linkedList.size()
 //linkedList.head()
-linkedList.toString()
+//linkedList.toString()
 //linkedList.tail()
 
 
-linkedList.contains('edwfsdfssd')
+//linkedList.contains('edwfsdfssd')
 //linkedList.find('58')
 
 
-linkedList.at(3)
+//linkedList.at(3)
+linkedList.prepend(228)
+//linkedList.toString()
 
+linkedList.prepend('JIJA')
+linkedList.size()
+linkedList.toString()
+
+//linkedList.at(8)
+
+
+linkedList.removeAt(10)
+linkedList.toString()
+
+
+/* linkedList.insertAt('Stas', 12)
+linkedList.toString() */

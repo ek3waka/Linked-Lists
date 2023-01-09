@@ -23,7 +23,10 @@ class LinkedList {
         }
     }
     prepend(value) {
-        firstNode = new Node(value)
+        let firstNode = new Node(value)
+        firstNode.next = this.list
+        this.list = firstNode
+        return this.list
 
     }
 
@@ -71,7 +74,7 @@ class LinkedList {
                 }
             }        
             else {
-               return console.log('Node not exist')
+               return console.log('Node does not exist')
             }
     }}
 
@@ -141,11 +144,53 @@ class LinkedList {
     }
 
     insertAt(value, index) {
-
+        let node = this.list
+        if (index == 1) {
+            let firstNode = new Node(value)
+            firstNode.next = this.list
+            this.list = firstNode
+            
+        }
+        for (let i=1; i<index; i++) {
+            if (node) {
+                if (i == index-1) {
+                    let newNode = new Node(value)
+                    newNode.next = node.next
+                    node.next = newNode
+                    return node
+                }
+                else {
+                    node = node.next
+                }
+            }        
+            else node.tail()
+        }
     }
     
     removeAt(index) {
-
+        let node = this.list
+        if (index == 1) {
+            this.list.value = this.list.next.value
+            this.list.next = this.list.next.next
+            
+        }
+        for (let i=1; i<index; i++) {
+            if (node) {
+                if (i == index-1) {
+                    if (node.next) {
+                        node.next = node.next.next
+                    } else {
+                        return console.log('Node does not exist')
+                    }
+                
+                    
+                }
+                else {
+                    node = node.next
+                }
+            } else  return console.log('Node does not exist')
+            //return console.log('Node does not exist')
+        }
     }
 }
 
