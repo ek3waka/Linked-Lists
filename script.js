@@ -3,19 +3,25 @@ import { Node } from "./linkedListNode.js"
 
 const linkedList = new LinkedList()
 linkedList.createFirstNode(123)
-linkedList.list.next = new Node(34232423423)
-linkedList.list.next.next = new Node('qdsads')
-linkedList.list.next.next.next = new Node('58')
 linkedList.append(4566)
-console.log(linkedList)
-/* list.append(12)
-list.append(5435435)
-list.append('dfsdfdsf') */
-/* list.tail() */
+console.log()
+linkedList.append('qdsads')
+linkedList.append(34232423423)
+linkedList.append('58')
+linkedList.append(1)
 
 
+//console.log(linkedList)
+
+//linkedList.size()
+//linkedList.head()
+linkedList.toString()
+//linkedList.tail()
 
 
+linkedList.contains('edwfsdfssd')
+//linkedList.find('58')
 
 
-/* console.log(list.tail()) */
+linkedList.at(3)
+
