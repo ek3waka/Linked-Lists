@@ -163,7 +163,9 @@ class LinkedList {
                     node = node.next
                 }
             }        
-            else node.tail()
+            else {
+                console.log('There is no node with this index')
+            }
         }
     }
     
@@ -189,7 +191,6 @@ class LinkedList {
                     node = node.next
                 }
             } else  return console.log('Node does not exist')
-            //return console.log('Node does not exist')
         }
     }
 }

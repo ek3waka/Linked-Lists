@@ -34,9 +34,10 @@ linkedList.toString()
 //linkedList.at(8)
 
 
-linkedList.removeAt(10)
-linkedList.toString()
-
-
-/* linkedList.insertAt('Stas', 12)
+/* linkedList.removeAt(10)
 linkedList.toString() */
+
+
+linkedList.insertAt('Stas', 1)
+linkedList.toString()
+linkedList.size()
